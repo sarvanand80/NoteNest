@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Physics Module Preview - Notenest</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    /* Inline zoom CSS */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .zoomed {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      z-index: 9999;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      cursor: zoom-out;
+      background: white;
+    }
+    .specifications {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .specifications span {
+      background: #eef5ff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .back-button {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .back-button a {
+      background: #333;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-button a:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+<section class="preview">
+  <div class="container">
+    <h1>Mathematics Module JEE PW - Preview</h1>
+<!-- Image Gallery -->
+<div class="gallery">
+    <img src="math-m.png" alt="Math Module Page 1">
+    <img src="M1.png" alt="Math Module Page 2">
+    <img src="M2.png" alt="Math Module Page 3">
+    <img src="M3.png" alt="Math Module Page 4">
+  </div>
+    <!-- Module Info -->
+    <div class="module-info">
+      <h2>Price: ₹99 <span class="original-price">₹209</span> <span class="discount">47.3% OFF</span></h2>
+
+      <!-- Specifications -->
+      <div class="specifications">
+        <span>🔹 50+ Theory Chapters</span>
+        <span>🔹 1000+ Solved Problems</span>
+        <span>🔹 Mock Tests + PYQs</span>
+      </div>
+
+      <p>Complete coverage of JEE Physics syllabus with clear concepts, detailed derivations, solved problems, PYQs and mock tests designed by IITians.</p>
+    </div>
+
+    <!-- Buy Now -->
+<a href="#" class="btn-primary">Buy Now</a>
+
+<!-- Download Preview as ZIP -->
+<a href="mathpwmodule.zip" download class="btn-primary" style="margin-top: 15px; display: inline-block;">Download  Preview Image</a>
+
+<div class="trust-badge">
+  ✅ 100% Secure Payment | 🔄 7-Day Money Back Guarantee
+</div>
+
+    
+
+ <!-- Back to Modules Button -->
+ <div class="back-button">
+    <a href="index.html#modules">← Back to Modules</a>
+  </div>
+    
+
+<!-- Zoom Script -->
+<script>
+const galleryImages = document.querySelectorAll('.gallery img');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('zoomed');
+  });
+});
+</script>
+<!-- Zoom Modal -->
+<div id="zoom-modal" class="zoom-modal">
+    <span id="close-modal">&times;</span>
+    <img id="modal-img" class="modal-content" src="">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+  <div class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️⭐️ "Maths used to scare me, now it's fun!" - Nidhi Sharma</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️ "Shortcut tricks are amazing, huge time saver." - Vikas Gupta</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️⭐️ "All topics are covered neatly, easy to understand." - Ritika Jain</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️⭐️ "Boosted my mock test scores by 30 marks." - Harsh Tiwari</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️ "Good notes, font size could be slightly bigger." - Manav Desai</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️ "Superb for last minute practice!" - Shivangi Patel</p>
+    </div>
+    <div class="review-card">
+      <p>⭐️⭐️⭐️⭐️⭐️ "Loved the PYQ collections!" - Krish Mathur</p>
+    </div>
+  </div>
+  
+</body>
+</html>
